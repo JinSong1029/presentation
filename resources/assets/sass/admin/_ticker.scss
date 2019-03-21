@@ -1,0 +1,40 @@
+.icc-ticker {
+  h3 {
+    font-size: 22px;
+    font-family: $font-special;
+    > span {
+      color: #999999;
+    }
+  }
+
+  .icon {
+    font-size: $icon-size - 4;
+    margin: 0px 3px;
+    color: #999;
+  }
+
+  .draft {
+    color: #999 !important;
+  }
+
+  .headline-error {
+    margin-top: 6px;
+    display: none;
+    color: $orange_darken;
+  }
+
+  .url-error {
+    margin-top: 6px;
+    display: none;
+    color: $orange_darken;
+  }
+
+}
+
+.icc-headline-incorrect small.headline-error {
+  display: block !important;
+}
+
+.icc-url-incorrect small.url-error {
+  display: block !important;
+}

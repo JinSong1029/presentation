@@ -1,0 +1,109 @@
+.icc-player {
+  margin: 20px 0px;
+
+  .all-used {
+    color: #bbb !important;
+  }
+}
+
+.icc-player-block {
+  margin: 20px 0px;
+//  height: 350px;
+  overflow: hidden;
+}
+
+.icc-player-block-thumbnail {
+  background-color: #eee;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+  img {
+    width: 100%;
+    min-height: 145px;
+  }
+}
+
+
+.icc-player-block-icons {
+  i.fa {
+    font-size: $icon-size;
+    color: #999;
+  }
+}
+
+.icc-player-block-headline {
+  font-size: 18px;
+  font-family: $font-special;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+
+.icc-player-block-content {
+
+}
+
+
+.icc-player-items {
+  margin: 20px 0px;
+}
+
+.icc-player-story-medias {
+  > a {
+    display: block;
+    margin: 3px 0px;
+
+    > img {
+      height: 40px;
+    }
+
+    &:hover {
+      background-color: #eee;
+      text-decoration: none;
+    }
+  }
+
+  >a.used {
+    opacity: 0.3;
+    color: #666;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+
+.icc-player-buttons {
+
+}
+
+.icc-player-buttons.disabled {
+
+  .btn {
+    background-color: #ccc !important;
+    border: 1px solid #bbb;
+  }
+
+  .btn.chosen {
+    background-color: #a6a6a6 !important;
+    border: 1px solid #a0a0a0;
+  }
+}
+
+.icc-player-block.recently-added {
+  animation: animatedBackground 3s linear;
+}
+
+@keyframes animatedBackground {
+  from { background-color: #ffffcc; }
+  to { background-color: #ffffff; }
+}
+
+.icc-player-access-info, .icc-player-access-select {
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 200px;
+   strong {
+     text-transform: capitalize;
+   }
+}

@@ -1,0 +1,50 @@
+.wmo-logos {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    width: 100%;
+    height: 100%;
+}
+.wmo-logos__list {
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem 2rem;
+}
+.wmo-logos__item {
+    float: left;
+    width: 20%;
+    height: 20%;
+    margin: 2.5%;
+}
+
+.wmo-logos__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wmo-logos__image {
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+.wmo-logos-popup {
+    padding: 2rem 3rem;
+    font-size: 2.25rem;
+    color: $brand1;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+.wmo-logos-popup__title {
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.wmo-logos-popup__descr {
+    font-weight: 200;
+    
+    @include redactorStyle();
+}

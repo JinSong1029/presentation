@@ -1,0 +1,204 @@
+@mixin headings {
+  $font-wmo: Helvetica Neue, Helvetica, Arial, Georgia;
+  $font-pwc: Georgia, Arial;
+  h1, h2, h3, h4, h5, ul, strong, p {
+	font-family: Arial, Georgia !important;
+	text-align: left !important;
+	letter-spacing: normal !important;
+	margin-bottom: 15px !important;
+  }
+  h1, h2, h3, h4, h5, ul {
+	strong {
+	  font-size: inherit !important;
+	  font-family: inherit !important;
+	  //font-weight: inherit!important;
+	}
+  }
+  blockquote {
+	font-size: 15px;
+	font-family: Georgia, Arial;
+	font-style: italic;
+	color: #004349;
+	padding: 0;
+	border: none;
+	margin-left: 0;
+  }
+  blockquote:before {
+	font-family: FontAwesome;
+	content: "\"";
+	/*font-size: 0.5em;*/
+  }
+  blockquote:after {
+	font-family: FontAwesome;
+	content: "\"";
+	/*font-size: 0.5em;*/
+  }
+  h1 {
+	font-size: 35px !important;
+	color: $brand6;
+	font-weight: 200 !important;
+  }
+  h2, h3, h4, h5, ul {
+	color: $brand1;
+	font-weight: 200 !important;
+  }
+  h2 {
+	margin-top: 0;
+	font-size: 25px !important;
+  }
+  h3 {
+	font-size: 20px !important;
+  }
+  h4 {
+	font-size: 17rem !important;
+  }
+  h5 {
+	font-size: 15rem !important;
+  }
+  p {
+	font-size: 15px !important;
+	color: #004349 !important;
+	line-height: 1.6em !important;
+	margin-bottom: 15px !important;
+  }
+  strong {
+	font-size: 15px !important;
+	font-weight: bold !important;
+  }
+
+  ul {
+	font-size: 15px !important;
+	padding-left: 2em !important;
+	li {
+	  ul {
+		margin-top: 6px;
+	  }
+	  margin: 0 0 6px 0 !important;
+	  padding-left: 0.3125rem !important;
+	  font-size: 15px !important;
+	  line-height: 1.3 !important;
+
+	  &:nth-of-type(odd) {
+		list-style-image: url('/images/text-list-image-up.png') !important;
+	  }
+	  &:nth-of-type(even) {
+		list-style-image: url('/images/text-list-image-down.png') !important;
+	  }
+	}
+
+	&:nth-of-type(odd) {
+	  li {
+		&:nth-of-type(odd) {
+		  list-style-image: url('/images/text-list-image-down.png') !important;
+		}
+		&:nth-of-type(even) {
+		  list-style-image: url('/images/text-list-image-up.png') !important;
+		}
+	  }
+
+	}
+
+  }
+}
+
+@mixin vertical-centered {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin headings-new {
+  h1, h2, h3, h4, h5, ul, strong, p {
+	font-family: Arial, Georgia !important;
+	text-align: left !important;
+	letter-spacing: normal !important;
+	margin-bottom: 15px !important;
+  }
+  h1 {
+	font-size: 35px !important;
+	color: $brand6;
+	font-weight: 200 !important;
+  }
+  .wmo-rich-heading, .subheading, .wmo-rich-medium, ul, strong, p {
+	font-family: Arial, Georgia !important;
+	text-align: left !important;
+	letter-spacing: normal !important;
+	margin-bottom: 15px !important;
+  }
+
+  .wmo-rich-heading, .wmo-rich-subheading, .wmo-rich-medium, ul {
+	strong {
+	  font-size: inherit !important;
+	  font-family: inherit !important;
+	}
+	a{
+	  color: #15c!important;
+	  text-decoration: underline!important;
+	}
+  }
+  .wmo-rich-heading {
+	font-size: 35px !important;
+	color: $brand6;
+	font-weight: 200 !important;
+  }
+  .wmo-rich-subheading, .wmo-rich-medium, ul {
+	color: $brand1;
+	font-weight: 200 !important;
+  }
+  .wmo-rich-subheading {
+	margin-top: 0;
+	font-size: 25px !important;
+  }
+  .wmo-rich-medium {
+	font-size: 20px !important;
+  }
+
+  p, .wmo-rich-small {
+	font-size: 15px;
+	color: #004349;
+	line-height: 1.6em;
+	margin-bottom: 15px;
+	a {
+	  color: #15c;
+	  text-decoration: underline;
+	}
+
+  }
+  strong {
+	font-size: 15px;
+	font-weight: bold;
+  }
+  ul {
+	font-size: 15px;
+	padding-left: 2em;
+	li {
+	  ul {
+		margin-top: 6px;
+	  }
+	  margin: 0 0 6px 0;
+	  padding-left: 0.3125rem;
+	  font-size: 15px;
+	  line-height: 1.3;
+
+	  &:nth-of-type(odd) {
+		list-style-image: url('/images/text-list-image-up.png');
+	  }
+	  &:nth-of-type(even) {
+		list-style-image: url('/images/text-list-image-down.png');
+	  }
+	}
+
+	&:nth-of-type(odd) {
+	  li {
+		&:nth-of-type(odd) {
+		  list-style-image: url('/images/text-list-image-down.png');
+		}
+		&:nth-of-type(even) {
+		  list-style-image: url('/images/text-list-image-up.png');
+		}
+	  }
+
+	}
+
+  }
+}

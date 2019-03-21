@@ -1,0 +1,154 @@
+.icc-thought {
+  h3 {
+    font-size: 22px;
+    font-family: $font-special;
+    > span {
+      color: #999999;
+    }
+  }
+}
+
+.icc-thought-block {
+  position: relative;
+  //  overflow: hidden;
+}
+
+.icc-thought-block.overflow-hidden {
+    overflow: hidden;
+}
+
+
+.icc-thought-block-date {
+  color: #999;
+}
+
+.icc-thought-block-content {
+  padding: 10px 0px 5px;
+  font-size: 20px;
+  font-family: $font-special;
+  font-style: italic;
+}
+
+
+.icc-thought-block-author {
+  font-size: 20px;
+  font-family: $font-special;
+  color: #999;
+}
+
+.icc-thought-block-edit {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.icc-thought-block-delete {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 100;
+}
+
+.icc-thougth-today {
+  margin-bottom: 50px;
+
+  .icc-thought-block-edit {
+    right: auto;
+    left: 0px;
+    bottom: -40px;
+    font-size: 16px;
+  }
+}
+
+.icc-thoughts-calendar {
+
+  .date {
+    cursor: auto !important;
+  }
+
+  .day.filled {
+    color: $orange_darken;
+    font-weight: bold;
+    cursor: pointer !important;
+  }
+
+  .filled.weekend {
+    color: #ccc;
+    font-weight: normal;
+    cursor: auto;
+  }
+
+  .day:hover {
+    background-color: transparent;
+  }
+
+
+}
+
+#thoughts-calendar .day.today.active {
+  background-color: lighten(#ffdb99, 5%);
+  border-color: lighten(#ffdb99, 5%);
+}
+
+#thoughts-calendar .day.today:not(.active) {
+  background: transparent !important;
+}
+
+.icc-thought-icons {
+  margin-top: 10px;
+  i {
+    font-size: $icon-size;
+    color: #999;
+  }
+}
+
+.icc-thoughts-delete-form-confirm {
+  .message {
+    padding: 20px 10px;
+    b {
+      font-size: 16px;
+      font-weight: normal;
+      color: #d9534f;
+    }
+    .btn-link {
+      color: #999 !important;
+    }
+  }
+}
+
+.icc-thoughts-delete-confirm {
+  position: absolute;
+  width: 75%;
+  right: 0;
+  top: -200px;
+  height: 100%;
+  z-index: 200;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+
+  .message {
+    padding: 20px 10px;
+    b {
+      font-size: 16px;
+      font-weight: normal;
+      color: #d9534f;
+    }
+    .btn-link {
+      color: #999 !important;
+    }
+  }
+}
+
+.icc-thoughts-delete-confirm.active {
+  top: 0;
+}
+
+.icc-gray-label{
+  b{
+    color: #000000;
+  }
+}

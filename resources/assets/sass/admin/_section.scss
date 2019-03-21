@@ -1,0 +1,58 @@
+.morris-presentation-block-edit {
+  float: right;
+  z-index: 100;
+}
+
+.morris-presentation-block-move {
+  float: right;
+  margin-left: 20px;
+  z-index: 100;
+}
+
+.morris-presentation-block-delete {
+  float: right;
+  margin-left: 20px;
+  z-index: 100;
+}
+
+.add-slide {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.morris-section-title {
+  margin-bottom: 20px;
+}
+
+.morris-success-message,.morris-error-message {
+  color: green;
+  //font-weight: bold;
+  margin-left: 15px;
+  padding: 4px 8px;
+  background-color: #cefeba;
+  width: 30%;
+  min-width: 400px;
+  border-radius: 5px;
+  display: none;
+}
+.morris-error-message{
+  background-color: #fe8296;
+  color: #fff!important;
+}
+
+.morris-blank-admin {
+  height: 400px;
+  background-color: #f9f9f9;
+  text-align: center;
+  vertical-align: middle;
+  color: #eee;
+  display: table;
+  width: 100%;
+
+  h1 {
+    height: 400px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

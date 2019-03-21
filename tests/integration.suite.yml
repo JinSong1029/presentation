@@ -1,0 +1,8 @@
+class_name: IntegrationTester
+modules:
+    enabled:
+        - \Helper\Integration
+        - Filesystem
+        - Laravel5:
+            cleanup: true
+            environment_file: .env.test

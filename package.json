@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "chmod 700 vendor/bin/codecept && chmod 700 vendor/codeception/codeception/codecept && vendor/bin/codecept run"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.0",
+    "laravel-elixir": "^3.4.3"
+  }
+}

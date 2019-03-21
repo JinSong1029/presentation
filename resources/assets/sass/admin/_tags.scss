@@ -1,0 +1,52 @@
+.icc-tags {
+  h3 {
+    font-size: 22px;
+    font-family: $font-special;
+    > span {
+      color: #999999;
+    }
+  }
+
+  .icon {
+    font-size: $icon-size - 4;
+    margin: 0px 3px;
+    color: #999;
+  }
+
+
+  .sortable-ghost {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+}
+
+
+.icc-tags-edit-form-td {
+  padding: 8px 0px !important;
+  > .input-group {
+    width: 100%;
+  }
+}
+
+.icc-tags-hidden {
+  color: $orange_darken;
+}
+
+
+.icc-ul-striped {
+  padding: 0;
+  li {
+    padding: 10px 16px;
+    list-style-type: none;
+    display: block;
+    background-color: #fff;
+  }
+  li:nth-child(odd) {
+    background-color: #eee;
+  }
+
+  li.edit {
+    padding: 3px;
+  }
+}

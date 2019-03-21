@@ -1,0 +1,97 @@
+body {
+    &.template {
+        .icons-view-content {
+            h1 {
+                &.title-rule {
+                    text-align: left;
+                    &:after {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .icons-content {
+                @media only screen and (min-width: 1024px) {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
+                    -ms-flex-line-pack: start;
+                    align-content: flex-start;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                }
+                
+                & > div {
+                    @media only screen and (min-width: 1024px) {
+                        width: 31%;
+                    }
+                    opacity: 0;
+                    -ms-transform: translateX(-30px);
+                    transform: translateX(-30px);
+                    margin-bottom: 30px;
+                    transition: all .5s ease-in-out;
+
+                    @media only screen and (min-width: 1024px) {
+                        &:nth-child(3n + 2){
+                            margin-left: 3.5%;
+                            margin-right: 3.5%;
+                        }
+                    }
+                    
+                    h2 {
+                        margin: 10px 0 5px;
+                    }
+                    .icon-contain {
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-direction: row;
+                        flex-direction: row;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -ms-flex-line-pack: center;
+                        align-content: center;
+                        -ms-flex-wrap: no-wrap;
+                        flex-wrap: no-wrap;
+                        position: relative;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100%;
+                        border: 2px solid rgba(78,183,175,.75);
+                        img {
+                            width: 55%;
+                            height: auto;
+                            display: block;
+                            max-width: 100%;
+                        }
+                    }
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &.loaded {
+            .icons-view-content {
+                .icons-content {
+                    & > div {
+                        opacity: 1;
+                        -ms-transform: translateX(0);
+                        transform: translateX(0);
+                        @for $i from 1 through 20 {
+                            &:nth-child(#{$i}) {
+                                transition-delay: ($i - 1)/10 + .5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
