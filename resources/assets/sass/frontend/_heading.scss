@@ -1,0 +1,12 @@
+.wmo-slide-welcome{
+  &.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > .wmo-slide-blank__content {
+      h1 {
+        font-family: HelveticaNeueLT-Light,Helvetica,Arial,sans-serif !important;
+      }
+    }
+  }
+}

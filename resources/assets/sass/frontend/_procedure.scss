@@ -1,0 +1,64 @@
+.procedure {
+	height: 100%;
+	background-color: $white;
+	.procedure__list,
+	.procedure__item {
+		height: 100%;
+	}
+	.procedure__list {
+		width: 100%;
+		text-align: center;
+		font-size: 0;
+	}
+	.procedure__item {
+		width: 16.6%;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		text-align: left;
+		vertical-align: top;
+		&:first-child {
+			.procedure-label {
+				padding-left: 0;
+				margin-left: 10px;
+				&:before,
+				&:after {
+					margin-left: -1px;
+				}
+			}
+		}
+	}
+
+	.procedure-content {
+		padding: 10px 10px;
+		height: 74%;
+		overflow: hidden;
+
+		@include headings-new();
+		//@include redactorStyle();
+	}
+	.procedure-label {
+		height: 20%;
+		padding: 0 20px 20px 10px;
+		margin-top: 18px;
+		width: 100%;
+		background: $white;
+		position: relative;
+		border-top: 2px solid $brand6;
+
+		@include headings-new();
+
+		em, i {
+			font-style: italic;
+		}
+
+		&:before {
+			top: -2.5rem;
+			@include arrow( $brand6 );
+		}
+		&:after {
+			top: -2.3125rem;
+			@include arrow( $white );
+		}
+	}
+}

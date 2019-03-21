@@ -1,0 +1,8 @@
+$brand1: #004349;
+$brand6: #4FBFA7;
+.re-formatting:before{
+  content: normal;
+}
+.redactor-editor {
+ @include headings()
+}

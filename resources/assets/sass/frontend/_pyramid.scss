@@ -1,0 +1,99 @@
+.wmo-pyramid {
+  background-color: white;
+  position: absolute;
+  display: table;
+  vertical-align: middle;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+$pyramid-image-width: 53%;
+
+.wmo-pyramid-image {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  img {
+    max-width: $pyramid-image-width;
+    height: auto;
+
+    @media (min-width: 1400px) {
+      max-width: 742px;
+      height: auto;
+    }
+
+    @media (max-height: 816px) {
+      max-width: 600px;
+    }
+  }
+}
+
+.wmo-pyramid-icon {
+  height: 2.375rem;
+  width: 3.25rem;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.wmo-pyramid-title {
+  color: $brand6;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  margin: .6rem 0;
+}
+
+.wmo-pyramid-content {
+  font-weight: bold;
+  color: $brand3;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+
+.wmo-pyramid-group {
+  z-index: 200;
+  position: absolute;
+  width: 20%;
+  height: 20rem;
+  overflow: hidden;
+
+  &.group-tl {
+    top: 10%;
+    left: 15%;
+  }
+
+  &.group-tr {
+    top: 10%;
+    right: 15%;
+  }
+
+  &.group-bl {
+    top: 40%;
+    left: 8%;
+  }
+
+  &.group-br {
+    top: 40%;
+    right: 8%;
+  }
+  &.group-thl {
+    top: 70%;
+    left: 0%;
+  }
+
+  &.group-thr {
+    top: 70%;
+    right: 0%;
+  }
+}

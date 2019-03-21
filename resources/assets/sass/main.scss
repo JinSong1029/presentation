@@ -1,0 +1,336 @@
+@import "compass";
+
+@import "mixins";
+@import "admin/variables";
+@import "admin/header";
+@import "admin/home";
+@import "admin/featured";
+@import "admin/story";
+@import "admin/tags";
+@import "admin/ticker";
+@import "admin/thought";
+@import "admin/player";
+@import "admin/highlighted";
+@import "admin/media";
+@import "admin/announcements";
+@import "admin/defaults";
+@import "admin/section";
+@import "admin/presentation";
+@import "components/uploader";
+@import "components/chosen";
+@import "components/guillotine";
+@import "components/mediatypes";
+@import "components/select2";
+@import "components/redactor";
+@import "components/new-redactor";
+
+
+h1, h2, h3, .serif {
+  font-family: "Georgia", Times, serif;
+}
+
+.morris-page-title {
+  font-family: "Georgia", Times, serif;
+  font-size: 22px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.morris-page-sub-title {
+  font-family: "Georgia", Times, serif;
+  font-size: 20px;
+  color: #999;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.transition_basic {
+  -webkit-transition: color 200ms linear, background-color 200ms linear;
+  -moz-transition: color 200ms linear, background-color 200ms linear;
+  -o-transition: color 200ms linear, background-color 200ms linear;
+  -ms-transition: color 200ms linear, background-color 200ms linear;
+  transition: color 200ms linear, background-color 200ms linear;
+}
+
+a, input, button {
+  @extend .transition_basic;
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline: 0 !important;
+}
+
+
+.login-panel {
+  border-radius: 0;
+  input.form-control {
+    border-radius: 0;
+  }
+  .btn {
+    border: none;
+    border-radius: 0;
+    padding: 7px 25px;
+    font-size: 12pt;
+  }
+}
+
+.btn-cancel {
+  color: #929292;
+  border-color: transparent;
+}
+.input-group-btn .submit {
+  position: relative;
+
+  > i {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    color: #666;
+  }
+
+}
+.icon-link {
+	color: #919191;
+	&:hover {
+		color: #444;
+	}
+}
+
+
+#wrapper table {
+  td {
+    vertical-align: middle;
+  }
+}
+
+table.sortable {
+  .inactive {
+    color: #999 !important;
+  }
+  th {
+    border: none !important;
+    a {
+      color: #000;
+      font-size: 12pt;
+    }
+    .sort-icon {
+      margin-left: 10px;
+    }
+  }
+}
+
+#wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  #filter-list {
+    font-size: 12pt;
+    ul {
+      margin-left: 3px;
+      li {
+        line-height: 10pt;
+        border-right: 1px solid #000000;
+        &:last-child {
+          border: none;
+        }
+        a {
+          font-weight: bold;
+          color: #a9a9a9;
+          &.active {
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .manage-model { 
+    margin: 30px 0;
+    .offset-height-20 {
+      margin: 20px 0;
+    }
+    .btn-search {
+      position: relative;
+      width: 40px;
+      height: 46px;
+      > i {
+        position: absolute;
+        top: 2px;
+        left: 14px;
+        color: #666;
+      }
+    }
+  }
+  .table-data-index {
+    tbody {
+      tr:nth-child(4n+1) {
+        background: #ebebeb;
+      }
+    }
+    font-size: 16px;
+    th {
+      border: none;
+      a {
+        color: #000;
+        font-size: 12pt;
+      }
+      .sort-icon {
+        margin-left: 10px;
+      }
+    }
+    td {
+      border: none;
+      padding: 12px;
+      vertical-align: middle;
+      @media (max-width: 550px) {
+        padding: 4px;
+        .btn {
+          padding: 3px;
+          font-size: 16px;
+        }
+        h4 {
+          font-size: 18px !important;
+        }
+      }
+      a {
+        word-break: break-all;
+      }
+      &.status-icon {
+        color: #919191;
+      }
+    }
+    .row-data-index-name {
+      width: 29%;
+    }
+    .row-data-index-email {
+      width: 30%;
+    }
+    .row-data-index-access {
+      width: 20%;
+      @media (max-width: 550px) {
+        width: 30%;
+      }
+    }
+    .edit-row-action,
+    .delete-row-action,
+    .hide-row-action{
+      @media (max-width: 550px) {
+        padding: 3px;
+      }
+    }
+    .row-delete {
+      background: #f7a499 !important;
+      .delete-row-action .icon-link {
+  			color: #c9302c !important;
+  		}
+    }
+    .row-confirm {
+      display: none;
+      height: 110px;
+      background: #f4d8d5;
+      td {
+        vertical-align: middle;
+        h4 {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+        h3 {
+          font-size: 20px;
+          margin-top: 16px;
+        }
+      }
+    }
+    .gradeX.selected {
+      .table-name,
+      .table-password{
+        opacity: 0.4;
+      }
+      .edit-row-action {
+        .icon-link {
+          color: #48D1CC;
+        }
+      }
+    }
+    .gradeX.row-delete {
+      .text-right {
+        .icon-link {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  .pagination {
+    li {
+      a, span {
+        padding: 10px 20px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 0;
+      }
+      &.active {
+        a, span {
+          border: 1px solid #d6d6d6;
+          background: #d6d6d6;
+        }
+      }
+    }
+  }
+  .vertical-margin {
+    margin: 10px 0;
+  }
+
+  .status-hidden {
+    color: #999;
+
+    .status-td {
+      color: $orange_darken;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.icc-spacer-20 {
+  padding: 10px 0px;
+}
+
+.icc-spacer-30 {
+  padding: 15px 0px;
+}
+
+.row.no-gutter {
+  margin-right:0;
+  margin-left:0;
+}
+.row.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.table {
+  strong  a {
+    text-decoration: none !important;
+  }
+}
+
+.tool-active >i{
+  color:#48D1CC;
+}
+
+.make-valign{
+  padding-top: 40px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.edit_slide{
+  cursor: pointer;
+}

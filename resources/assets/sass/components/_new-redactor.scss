@@ -1,0 +1,29 @@
+.fr-element, .fr-element-oneline {
+
+
+  a {
+	color: #15c;
+	text-decoration: underline;
+  }
+  @include headings-new();
+
+
+}
+
+.oneline {
+  .fr-wrapper {
+	white-space: nowrap;
+  }
+}
+
+.fr-dropdown-list {
+  li blockquote {
+	border: none !important;
+  }
+}
+.fr-colors-tabs{
+  span{
+	width: 100%!important;
+	display: none!important;
+  }
+}

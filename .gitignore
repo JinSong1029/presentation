@@ -1,0 +1,13 @@
+
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.idea
+.htaccess
+.sass-cache
+.DS_Store
+tests/_output/*
+resources/assets/node_modules
+/img
+/vendor

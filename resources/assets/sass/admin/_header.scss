@@ -1,0 +1,103 @@
+$orange_darken: #e37d1e;
+
+.icc-logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  img {
+    width: 170px;
+  }
+}
+
+.icc-navbar {
+  background: none;
+  border-color: transparent;
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0 25px;
+  @media (max-width: 500px) {
+    padding-bottom: 10px;
+  }
+  #navbarCollapse {
+    border: none;
+  }
+  h2 {
+    font-size: 35px;
+    font-weight: 300;
+    color: #aaa;
+    font-family: "Georgia", Times, serif;
+    @media (max-width: 500px) {
+      bottom: 0;
+      font-size: 19px;
+    }
+  }
+  .icc-user-details {
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  .icc-nav-menu {
+    margin-top: 10px;
+    margin-right: -5px;
+    li {
+      padding: 0 5px;
+      line-height: 10pt;
+      border-right: 1px solid #999;
+      &.active, &.active a {
+        background: transparent;
+      }
+      &:last-child {
+        border: none;
+        a {
+          margin-right: 0;
+        }
+      }
+      a {
+        color: #48D1CC;
+        margin: 0 2px;
+        font-weight: 700;
+        padding: 0;
+        line-height: 10pt;
+      }
+    }
+
+    @media (max-width: 768px) {
+      li {
+        border: 0px;
+        margin: 5px 0px;
+      }
+    }
+  }
+}
+
+.icc-underlogo-menu {
+  padding: 0;
+  margin-top: 15px;
+  margin-left: -10px;
+  li {
+    padding: 0 5px;
+    line-height: 10pt;
+    list-style-type: none;
+    display: inline-block;
+    border-right: 1px solid #999;
+
+    a {
+      margin: 0 2px;
+      font-size: 14px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover {
+  background-color: transparent;
+  color: #999;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: $orange_darken;
+  text-decoration: underline;
+}

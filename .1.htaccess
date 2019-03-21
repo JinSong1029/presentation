@@ -1,0 +1,29 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /var/www/vhosts/flatearth.co.uk/walkermorris.flatearth.co.uk/.htpasswd
+AuthUserFile C:/wamp64/www/walker-morris-opt/.htpasswd
+Require valid-user
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+#php_value upload_max_filesize 12M
+#php_value post_max_size 200M
+
+#ExpiresActive On
+#ExpiresDefault A1
+#Header append Cache-Control must-revalidate
